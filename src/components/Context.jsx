@@ -1,8 +1,29 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
+/*
+const { Spot } = require('@binance/connector');
+const apiKey =
+  'GptpQXcqzlVVO321uxW7aTElajdvbYR66OJ5X8ssozcomDBkrXgJKpUPICLWskCq';
+const apiSecret =
+  '45MDzJhUB24j9txoDzALsyR38PtQYXGVFp7I7iKc9nP7AbmcP5qYokxTXXy3X5Cg';
+const client = new Spot(apiKey, apiSecret);
+*/
 export const MyContext = createContext();
 
 const Context = (props) => {
   const [vw, setVw] = useState(window.innerWidth);
+
+  useEffect(() => {
+    //функция для адаптивных иконок
+    const handleResize = (event) => {
+      setVw(event.target.innerWidth);
+    };
+
+    //
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const adaptiveFont = (pcSize, mobSize) => {
     let maxWidth = 1536;
     let addSize = pcSize - mobSize;

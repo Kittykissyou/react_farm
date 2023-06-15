@@ -6,19 +6,6 @@ import Body from './Body';
 const Major = () => {
   const data = useContext(MyContext);
 
-  useEffect(() => {
-    //функция для адаптивных иконок
-    const handleResize = (event) => {
-      data.setVw(event.target.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    //
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [data.colorTheme]);
-
   if (localStorage.getItem('color')) {
     document.documentElement.setAttribute(
       //Применяем "сохраненную" тему
