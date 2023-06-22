@@ -9,6 +9,7 @@
   --color-border: none;
   --color-dot-border: #fff solid;
   --color-bg-blocks: #fff;
+  --color-inside-border: rgb(59, 130, 246, 0.7) solid;
 }
 
 :root[data-color-scheme='dark'] {
@@ -18,6 +19,7 @@
   --color-border: rgb(123, 97, 255, 0.5) solid;
   --color-dot-border: rgb(123, 97, 255, 0.5) solid;
   --color-bg-blocks: #2f3c50;
+  --color-inside-border: rgb(123, 97, 255, 0.5) solid;
 }
 
 .wrapper {
@@ -94,7 +96,69 @@
     position: relative;
     z-index: 2;
   }
+  .info-block {
+    @media (min-width: 761px) {
+      @include adaptive-heigth(190, 100);
+      width: 22%;
+      background: var(--color-bg-blocks);
+      box-shadow: 0px 3px 8px rgba(9, 30, 66, 0.16),
+        0px 0px 1px rgba(9, 30, 66, 0.31);
+      border: var(--color-border);
+      border-radius: 0.5vw;
+    }
+  }
+  ._slide {
+    @media (max-width: 761px) {
+      width: 100%;
+      flex: 1 0 100%;
+      height: 90%;
+      margin-right: 20%;
+      position: relative;
+      border: var(--color-border);
+      border-radius: 0.5vw;
+      background: var(--color-bg-blocks);
+      color: white;
+      box-shadow: 0px 3px 8px rgba(9, 30, 66, 0.16),
+        0px 0px 1px rgba(9, 30, 66, 0.31);
+      .block-content {
+        height: 100%;
+        display: flex;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 600;
+        color: var(--color-text);
+        transition: color 400ms linear;
+        @include adaptive-font(25, 16);
 
+        .block-content__left {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .block-content__right {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          .block-content__top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            border-bottom: var(--color-inside-border);
+            border-left: var(--color-inside-border);
+          }
+          .block-content__bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+
+            border-left: var(--color-inside-border);
+          }
+        }
+      }
+    }
+  }
   ._arrows {
     @media (min-width: 761px) {
       visibility: hidden;
@@ -123,18 +187,6 @@
 
         @media (min-width: 761px) {
           display: none;
-        }
-        .slide {
-          flex: 1 0 100%;
-          height: 90%;
-          margin-right: 20%;
-          position: relative;
-          border: var(--color-border);
-          border-radius: 0.5vw;
-          background: var(--color-bg-blocks);
-          color: white;
-          box-shadow: 0px 3px 8px rgba(9, 30, 66, 0.16),
-            0px 0px 1px rgba(9, 30, 66, 0.31);
         }
       }
     }

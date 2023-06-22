@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { MyContext } from './Context';
 import Icon from './Iconset';
+import Slide from './Slide';
 
 const Slider = function ({ autoPlay, autoPlayTime }) {
   const data = useContext(MyContext);
@@ -49,18 +50,6 @@ const Slider = function ({ autoPlay, autoPlayTime }) {
     setTouchPosition(null);
   };
 
-  useEffect(() => {
-    if (!autoPlay) return;
-
-    const interval = setInterval(() => {
-      changeSlide(1);
-    }, autoPlayTime);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [data.infoBlock.length, slide]);
-
   const renderDots = () => {
     const dots = [];
     for (let i = 0; i < data.infoBlock.length; i++) {
@@ -93,11 +82,7 @@ const Slider = function ({ autoPlay, autoPlayTime }) {
           style={{ transform: `translateX(-${slide * 120}%)` }}
         >
           {data.infoBlock.map((el, index) => {
-            return (
-              <div className="slide" key={index}>
-                {<p>{el}</p>}
-              </div>
-            );
+            return <Slide key={index} id={index} />;
           })}
         </div>
 
