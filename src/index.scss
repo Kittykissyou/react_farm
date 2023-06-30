@@ -128,32 +128,54 @@
         color: var(--color-text);
         transition: color 400ms linear;
         @include adaptive-font(25, 16);
-
-        .block-content__left {
-          width: 30%;
+        .block-content__left-top,
+        .block-content__top-top,
+        .block-content__bottom-top {
+          @include adaptive-font(23, 13);
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: end;
+          margin-bottom: 5%;
+          height: 50%;
+          width: 100%;
+        }
+        .block-content__left-bottom,
+        .block-content__top-bottom,
+        .block-content__bottom-bottom {
+          margin-top: 5%;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          height: 50%;
+          width: 100%;
+        }
+        .block-content__left {
+          width: 30%;
         }
         .block-content__right {
           width: 70%;
           display: flex;
+          border-left: var(--color-inside-border);
           flex-direction: column;
           .block-content__top {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 50%;
             border-bottom: var(--color-inside-border);
-            border-left: var(--color-inside-border);
+
+            .block-content__top-top {
+              margin-bottom: 1%;
+            }
+            .block-content__top-bottom {
+              margin-top: 1%;
+            }
           }
           .block-content__bottom {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 50%;
-
-            border-left: var(--color-inside-border);
+            .block-content__bottom-top {
+              margin-bottom: 1%;
+            }
+            .block-content__bottom-bottom {
+              margin-top: 1%;
+            }
           }
         }
       }

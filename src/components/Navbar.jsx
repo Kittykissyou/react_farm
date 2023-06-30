@@ -25,6 +25,9 @@ export default function Navbar() {
           icon="notifications"
           size={data.adaptiveFont(32, 24)}
           className="_icon"
+          onClick={() => {
+            console.log(data.currentTokenPrice.toFixed(2));
+          }}
         />
         <Icon
           icon="calendar"

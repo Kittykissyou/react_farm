@@ -8,57 +8,58 @@ const Context = (props) => {
   const [currentTokenBalance, setCurrentTokenBalance] = useState('');
   const [currentUSDTBalance, setCurrentUSDTBalance] = useState('');
   const [nextOperation, setNextOperation] = useState('');
+  const [lastOpPrice, setLastOpPrice] = useState('');
+  const [profitPercent, setProfitPercent] = useState('');
+  const [dipPercent, setDipPercent] = useState(0);
+  const [stopLoss, setStopLoss] = useState(0);
+  const [dealPerDay, setDealPerDay] = useState(0);
+  const [percentageDiff, setPercentageDiff] = useState(0);
+  const [upwardTrend, setUpwardTrend] = useState(0);
+
   const myLimitBy = 70;
 
-  useEffect(() => {
-    let TPconfig = {
-      method: 'get',
-      maxBodyLength: Infinity,
-      url: 'https://api.binance.com/api/v3/ticker/24hr',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-
-    axios
-      .request(TPconfig)
-      .then((response) => {
-        setCurrentTokenPrice(
-          Number(
-            response.data.filter((el) => el.symbol == 'BTCUSDT')[0].bidPrice
-          )
-        );
-      })
-
-      .catch((error) => {
-        console.log(error);
-      });
-
-    let TBconfig = {
-      method: 'get',
-      maxBodyLength: Infinity,
-      url: 'https://api.binance.com/sapi/v1/capital/config/getall?timestamp=1687332404014&signature=0f7ef653115fdacc1754317a0fdad1dbd5046472313abf9011030e5d8f7f4b1b',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-MBX-APIKEY':
-          'GptpQXcqzlVVO321uxW7aTElajdvbYR66OJ5X8ssozcomDBkrXgJKpUPICLWskCq',
-      },
-    };
-
+  let TBconfig = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: 'http://localhost:8089/balances',
+    headers: {
+      headers: { 'Content-Type': 'application/json' },
+    },
+  };
+  let PriceConfig = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: 'http://localhost:8089/price',
+    headers: {
+      headers: { 'Content-Type': 'application/json' },
+    },
+  };
+  const apiHandle = () => {
     axios
       .request(TBconfig)
       .then((response) => {
-        setCurrentTokenBalance(
-          Number(response.data.filter((el) => el.coin == 'BTC')[0].free)
-        );
-        setCurrentUSDTBalance(
-          Number(response.data.filter((el) => el.coin == 'USDT')[0].free)
-        );
+        setCurrentUSDTBalance(response.data.usdt.toFixed(2));
+        setCurrentTokenBalance(response.data.btc.toFixed(2));
       })
       .catch((error) => {
         console.log(error);
       });
-
+    axios
+      .request(PriceConfig)
+      .then((response) => {
+        setCurrentTokenPrice(response.data.toFixed(2));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    //Запрос сведений с биржи
+    apiHandle();
+    setInterval(() => {
+      apiHandle();
+    }, 10000);
+    //
     //функция для адаптивных иконок
     const handleResize = (event) => {
       setVw(event.target.innerWidth);
@@ -81,8 +82,8 @@ const Context = (props) => {
   const infoBlock = [
     ['currentBalance', 'nextOperation', 'dealToday'],
     ['currentTokenPrice', 'currentTokenBalance', 'myLimitBuy'],
-    ['lastOpPrice', 'percentageDiff'],
-    ['profit', 'dip', 'upwardTrend', 'stopLoss'],
+    ['lastOpPrice', 'percentageDiff', 'stopLoss'],
+    ['profit', 'dip', 'upwardTrend'],
   ];
 
   // ниже функция опеределения темной или светлой темы
@@ -126,6 +127,14 @@ const Context = (props) => {
     currentTokenBalance,
     currentUSDTBalance,
     myLimitBy,
+    nextOperation,
+    lastOpPrice,
+    profitPercent,
+    dipPercent,
+    stopLoss,
+    dealPerDay,
+    percentageDiff,
+    upwardTrend,
   };
   return (
     <MyContext.Provider value={value}> {props.children}</MyContext.Provider>
