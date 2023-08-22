@@ -3,7 +3,7 @@ import { MyContext } from './Context';
 import Icon from './Iconset';
 import Slide from './Slide';
 
-const Slider = function ({ autoPlay, autoPlayTime }) {
+const Slider = function () {
   const data = useContext(MyContext);
 
   const [slide, setSlide] = useState(0);

@@ -1,10 +1,13 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { MyContext } from './Context';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Body from './Body';
+import Footer from './Footer';
 
 const Major = () => {
   const data = useContext(MyContext);
+  const location = useLocation();
 
   if (localStorage.getItem('color')) {
     document.documentElement.setAttribute(
@@ -22,8 +25,15 @@ const Major = () => {
 
   return (
     <div>
-      <Navbar />
-      <Body />
+      {location.pathname !== '/' ? (
+        <Outlet />
+      ) : (
+        <div>
+          <Navbar />
+          <Body />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 };
