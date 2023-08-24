@@ -28,7 +28,7 @@ const Universal = () => {
       <div className="body _notPadding _container ">
         <div className="product__category">
           <h1> Универсальные комбикорма</h1>
-          <Table datas={data.universalData} setDatas={data.setUniversalData} />
+          <Table datas={data.universalData} />
         </div>
       </div>
       <Footer />

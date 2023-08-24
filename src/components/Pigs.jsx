@@ -28,7 +28,7 @@ const Pigs = () => {
       <div className="body _notPadding _container">
         <div className="product__category">
           <h1> Для свиней</h1>
-          <Table datas={data.pigsData} setDatas={data.setPigsData} />
+          <Table datas={data.pigsData} />
         </div>
       </div>
       <Footer />

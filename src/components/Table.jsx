@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { MyContext } from './Context';
 import Icon from './Iconset';
-const Table = ({ datas, setDatas }) => {
+const Table = ({ datas }) => {
   const data = useContext(MyContext);
 
   return (
@@ -21,10 +21,10 @@ const Table = ({ datas, setDatas }) => {
                   <Icon
                     icon="favorite"
                     className={`_icon _favorite _in-table ${
-                      el.isFavorite ? 'isFavorite' : ''
+                      data.favoriteProd.includes(el.name) ? 'isFavorite' : ''
                     }`}
                     onClick={() => {
-                      data.toggleIsFavoriteHandle(datas, setDatas, index);
+                      data.toggleIsFavoriteHandle(datas, index);
                     }}
                   />
                 </td>

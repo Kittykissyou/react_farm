@@ -28,7 +28,7 @@ const Grains = () => {
       <div className="body _notPadding _container">
         <div className="product__category">
           <h1> Зерно и крупа</h1>
-          <Table datas={data.grainsData} setDatas={data.setGrainsData} />
+          <Table datas={data.grainsData} />
         </div>
       </div>
       <Footer />

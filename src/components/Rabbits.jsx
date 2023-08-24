@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Rabbits = () => {
   const data = useContext(MyContext);
   const rabbitsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbyXLhcJ9hvenLxXJ9jGvwbgfYXyGs4H33fmFJ0UJeE_WhKssI_f_0BPNfJ2XO9ex_RW/exec?rabbits=true'
+    'https://script.google.com/macros/s/AKfycbzt6liC55xYUSI297-DOKqYAJkLr8qmuDOinrcNg_Bzx4Qyx6M5RepL7JhXVXEDV2ef/exec?rabbits=true'
   );
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Rabbits = () => {
       <div className="body _notPadding _container ">
         <div className="product__category">
           <h1> Для кроликов</h1>
-          <Table datas={data.rabbitsData} setDatas={data.setRabbitsData} />
+          <Table datas={data.rabbitsData} />
         </div>
       </div>
       <Footer />

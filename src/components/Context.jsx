@@ -14,17 +14,24 @@ const Context = (props) => {
   const [inventoryData, setInventoryData] = useState(false);
   const [universalAdditivesData, setUniversalAdditivesData] = useState(false);
   const [petsData, setPetsData] = useState(false);
-  const [favoriteProd, setFavoriteProd] = useState([]);
+  const [favoriteProd, setFavoriteProd] = useState(
+    () => JSON.parse(localStorage.getItem('favorite')) || ''
+  );
 
-  const toggleIsFavoriteHandle = (datas, setData, id) => {
-    setData({
-      data: [
-        ...datas.data,
-        (datas.data[id].isFavorite = !datas.data[id].isFavorite),
-      ],
-    });
-    setFavoriteProd([...favoriteProd, datas.data[id].name]);
+  const toggleIsFavoriteHandle = (datas, id) => {
+    if (
+      JSON.parse(localStorage.getItem('favorite')).includes(datas.data[id].name)
+    ) {
+      setFavoriteProd(favoriteProd.filter((el) => el !== datas.data[id].name));
+    }
+
+    if (!favoriteProd.includes(datas.data[id].name)) {
+      setFavoriteProd([...favoriteProd, datas.data[id].name]);
+    }
   };
+  useEffect(() => {
+    localStorage.setItem('favorite', JSON.stringify(favoriteProd));
+  }, [favoriteProd]);
 
   const adaptiveFont = (pcSize, mobSize) => {
     let maxWidth = 1536;
@@ -109,6 +116,7 @@ const Context = (props) => {
     petsData,
     setPetsData,
     toggleIsFavoriteHandle,
+    favoriteProd,
   };
   return (
     <MyContext.Provider value={value}> {props.children}</MyContext.Provider>

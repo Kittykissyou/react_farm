@@ -28,7 +28,7 @@ const Inventory = () => {
       <div className="body _notPadding _container">
         <div className="product__category">
           <h1> Инвентарь</h1>
-          <Table datas={data.inventoryData} setDatas={data.setInventoryData} />
+          <Table datas={data.inventoryData} />
         </div>
       </div>
       <Footer />

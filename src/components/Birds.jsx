@@ -52,24 +52,15 @@ const Birds = () => {
           <div className="body _notPadding _container">
             <div className="product__category">
               <h1> Для взрослых птиц</h1>
-              <Table
-                datas={data.oldBirdsData}
-                setDatas={data.setOldBirdsData}
-              />
+              <Table datas={data.oldBirdsData} />
             </div>
             <div className="product__category">
               <h1> Молодняку птицы</h1>
-              <Table
-                datas={data.tinyBirdsData}
-                setDatas={data.setTinyBirdsData}
-              />
+              <Table datas={data.tinyBirdsData} />
             </div>
             <div className="product__category">
               <h1> Добавки для птицы</h1>
-              <Table
-                datas={data.additivesData}
-                setDatas={data.setAdditivesData}
-              />
+              <Table datas={data.additivesData} />
             </div>
           </div>
           <Footer />
