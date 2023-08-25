@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react_farm/static/css/main.2ccbc934.css",
-    "main.js": "/react_farm/static/js/main.ff397f74.js",
+    "main.js": "/react_farm/static/js/main.0f9a6967.js",
     "index.html": "/react_farm/index.html",
     "main.2ccbc934.css.map": "/react_farm/static/css/main.2ccbc934.css.map",
-    "main.ff397f74.js.map": "/react_farm/static/js/main.ff397f74.js.map"
+    "main.0f9a6967.js.map": "/react_farm/static/js/main.0f9a6967.js.map"
   },
   "entrypoints": [
     "static/css/main.2ccbc934.css",
-    "static/js/main.ff397f74.js"
+    "static/js/main.0f9a6967.js"
   ]
 }
