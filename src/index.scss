@@ -329,6 +329,9 @@
       padding: 2% 0;
       color: var(--color-text);
     }
+    .without-favorite {
+      text-align: center;
+    }
   }
   table {
     text-align: center;
@@ -347,6 +350,9 @@
 
     td {
       @include adaptive-font(30, 10);
+      @media (max-width: 759px) {
+        @include adaptive-font(30, 15);
+      }
       font-weight: 600;
       color: var(--color-text);
       background: var(--color-table-border);
@@ -355,6 +361,10 @@
   }
 }
 ._in-table {
+  @media (max-width: 759px) {
+    width: 10%;
+    height: 10%;
+  }
   width: 5%;
   height: 5%;
   float: right;

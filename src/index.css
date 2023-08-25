@@ -522,6 +522,9 @@ h6 {
   padding: 2% 0;
   color: var(--color-text);
 }
+.body .product__category .without-favorite {
+  text-align: center;
+}
 .body table {
   text-align: center;
   width: 100%;
@@ -546,12 +549,25 @@ h6 {
   background: var(--color-table-border);
   padding: 1%;
 }
+@media (max-width: 759px) {
+  .body table td {
+    font-size: calc(
+    15px + 15 * ((100vw - 320px) / 1600)
+  );
+  }
+}
 
 ._in-table {
   width: 5%;
   height: 5%;
   float: right;
   color: #aea8b2;
+}
+@media (max-width: 759px) {
+  ._in-table {
+    width: 10%;
+    height: 10%;
+  }
 }
 
 .isFavorite {

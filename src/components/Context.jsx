@@ -17,6 +17,7 @@ const Context = (props) => {
   const [favoriteProd, setFavoriteProd] = useState(
     () => JSON.parse(localStorage.getItem('favorite')) || ''
   );
+  const [getFavoriteData, setGetFavoriteData] = useState(false);
 
   const toggleIsFavoriteHandle = (datas, id) => {
     if (
@@ -29,6 +30,7 @@ const Context = (props) => {
       setFavoriteProd([...favoriteProd, datas.data[id].name]);
     }
   };
+
   useEffect(() => {
     localStorage.setItem('favorite', JSON.stringify(favoriteProd));
   }, [favoriteProd]);
@@ -117,6 +119,8 @@ const Context = (props) => {
     setPetsData,
     toggleIsFavoriteHandle,
     favoriteProd,
+    getFavoriteData,
+    setGetFavoriteData,
   };
   return (
     <MyContext.Provider value={value}> {props.children}</MyContext.Provider>

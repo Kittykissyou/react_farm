@@ -5,30 +5,44 @@ import Loader from './Loader';
 import { useEffect, useContext } from 'react';
 import { MyContext } from './Context';
 import Footer from './Footer';
-const Grains = () => {
+
+const Favorite = () => {
   const data = useContext(MyContext);
-  const grainsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbyXLhcJ9hvenLxXJ9jGvwbgfYXyGs4H33fmFJ0UJeE_WhKssI_f_0BPNfJ2XO9ex_RW/exec?grains=true'
-  );
+
+  let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: `https://script.google.com/macros/s/AKfycbytdp7dgYEi7RrZUYyY1YKhrEgKwPJfJB-BofyLJk0ywRfvtzRuaL7gDIWusLsuPkoR/exec?favorite={"product":${localStorage.getItem(
+      'favorite'
+    )}}`,
+    headers: {},
+  };
 
   useEffect(() => {
-    axios
-      .request(grainsConfig)
-      .then((response) => {
-        data.setGrainsData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    console.log(data.favoriteProd);
+    if (data.favoriteProd !== [] || data.favoriteProd !== '') {
+      axios
+        .request(config)
+        .then((response) => {
+          data.setGetFavoriteData(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }, []);
 
-  return data.grainsData ? (
+  return data.getFavoriteData ? (
     <div>
       <Navbar />
       <div className="body _notPadding _container">
         <div className="product__category">
-          <h1> Зерно и крупа</h1>
-          <Table datas={data.grainsData} />
+          <h1> Избранное</h1>
+          {data.getFavoriteData.data.length !== 0 ? (
+            <Table datas={data.getFavoriteData} />
+          ) : (
+            <h1 className="without-favorite">Избранные товары отсутствуют</h1>
+          )}
         </div>
       </div>
       <Footer />
@@ -37,4 +51,4 @@ const Grains = () => {
     <Loader />
   );
 };
-export default Grains;
+export default Favorite;
