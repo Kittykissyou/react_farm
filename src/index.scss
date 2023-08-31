@@ -385,6 +385,9 @@
     font-weight: 600;
     color: var(--color-text);
   }
+  a {
+    text-decoration: underline;
+  }
   h2,
   a {
     @include adaptive-font(30, 14);
