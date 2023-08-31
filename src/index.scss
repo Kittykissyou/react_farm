@@ -39,6 +39,9 @@
   background-color: var(--color-background);
   transition: background-color 200ms linear;
   font-family: 'Roboto Slab', serif;
+  a {
+    font-family: 'Roboto Slab', serif;
+  }
 }
 
 ._container {
@@ -382,7 +385,8 @@
     font-weight: 600;
     color: var(--color-text);
   }
-  h2 {
+  h2,
+  a {
     @include adaptive-font(30, 14);
     font-weight: 600;
     color: var(--color-text);

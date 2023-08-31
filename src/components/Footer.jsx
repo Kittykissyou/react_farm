@@ -14,9 +14,9 @@ const Footer = () => {
           <div className="contacts__left">
             <h2>Телефоны</h2>
             <div className="contacts__left-numbers">
-              <h2>+79994109970</h2>
-              <h2>+79148044212</h2>
-              <h2>+79141418943</h2>
+              <a href="tel:+79994109970">+79994109970</a>
+              <a href="tel:+79994109970">+79148044212</a>
+              <a href="tel:+79994109970">+79141418943</a>
             </div>
           </div>
           <div className="contacts__mid">

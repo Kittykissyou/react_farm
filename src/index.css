@@ -146,6 +146,9 @@ h6 {
   transition: background-color 200ms linear;
   font-family: "Roboto Slab", serif;
 }
+.wrapper a {
+  font-family: "Roboto Slab", serif;
+}
 
 ._container {
   margin: 0 4% 0 4%;
@@ -587,7 +590,8 @@ h6 {
   font-weight: 600;
   color: var(--color-text);
 }
-.footer h2 {
+.footer h2,
+.footer a {
   font-size: calc(
     14px + 16 * ((100vw - 320px) / 1600)
   );

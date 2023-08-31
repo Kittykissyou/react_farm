@@ -19,7 +19,6 @@ const Favorite = () => {
   };
 
   useEffect(() => {
-    console.log(data.favoriteProd);
     if (data.favoriteProd !== [] || data.favoriteProd !== '') {
       axios
         .request(config)
