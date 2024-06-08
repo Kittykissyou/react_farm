@@ -12,7 +12,7 @@ const Favorite = () => {
   let config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: `https://script.google.com/macros/s/AKfycbytdp7dgYEi7RrZUYyY1YKhrEgKwPJfJB-BofyLJk0ywRfvtzRuaL7gDIWusLsuPkoR/exec?favorite={"product":${localStorage.getItem(
+    url: `https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec?favorite={"product":${localStorage.getItem(
       'favorite'
     )}}`,
     headers: {},

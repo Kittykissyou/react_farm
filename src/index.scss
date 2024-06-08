@@ -8,7 +8,7 @@
   --color-border: none;
   --color-dot-border: #fff solid;
   --color-table-border: white;
-  --color-table-inner-border: #f3f4f6;
+  --color-table-inner-border: lightgrey;
   --color-bg-blocks: #fff;
   --color-hover-bg-blocks: #3b82f6;
   --color-inside-border: rgb(59, 130, 246, 0.7) solid;
@@ -443,7 +443,7 @@
     td {
       @include adaptive-font(30, 10);
       @media (max-width: 759px) {
-        @include adaptive-font(30, 15);
+        @include adaptive-font(30, 12);
       }
       font-weight: 600;
       color: var(--color-text);

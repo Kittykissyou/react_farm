@@ -45,7 +45,7 @@ const Table = ({ datas }) => {
                 ) : (
                   <td className="product__name">
                     {el.name}
-                    <Icon
+                    {/* <Icon
                       icon="favorite"
                       className={`_icon _favorite _in-table ${
                         data.favoriteProd.includes(el.name) ? 'isFavorite' : ''
@@ -53,7 +53,7 @@ const Table = ({ datas }) => {
                       onClick={() => {
                         data.toggleIsFavoriteHandle(datas, index);
                       }}
-                    />
+                    /> */}
                   </td>
                 )}
 

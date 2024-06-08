@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Rabbits = () => {
   const data = useContext(MyContext);
   const rabbitsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbzt6liC55xYUSI297-DOKqYAJkLr8qmuDOinrcNg_Bzx4Qyx6M5RepL7JhXVXEDV2ef/exec?rabbits=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec?rabbits=true'
   );
 
   useEffect(() => {

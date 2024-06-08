@@ -9,13 +9,13 @@ import Footer from './Footer';
 const Birds = () => {
   const data = useContext(MyContext);
   const oldBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbyaedSlRvQN7OKLYimAg1i0iv2BXVGAl10WnGbZ4w8VNVQlxNPgN9ljztszJwotE1Cf/exec?oldBirds=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec/exec?oldBirds=true'
   );
   const tinyBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbz4QrTnLsxJv8knlMhu8-T3L5yNvh2MrrPrfmjpHWW2nrtrAOqZaRUovRxLeZH6Srms/exec?tinyBirds=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec/exec?tinyBirds=true'
   );
   const additivesConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbz4QrTnLsxJv8knlMhu8-T3L5yNvh2MrrPrfmjpHWW2nrtrAOqZaRUovRxLeZH6Srms/exec?additives=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec/exec?additives=true'
   );
 
   useEffect(() => {

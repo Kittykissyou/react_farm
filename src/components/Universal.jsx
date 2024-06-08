@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Universal = () => {
   const data = useContext(MyContext);
   const universalConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbyXLhcJ9hvenLxXJ9jGvwbgfYXyGs4H33fmFJ0UJeE_WhKssI_f_0BPNfJ2XO9ex_RW/exec?universal=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec?universal=true'
   );
 
   useEffect(() => {

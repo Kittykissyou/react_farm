@@ -107,7 +107,7 @@ h6 {
   --color-border: none;
   --color-dot-border: #fff solid;
   --color-table-border: white;
-  --color-table-inner-border: #f3f4f6;
+  --color-table-inner-border: lightgrey;
   --color-bg-blocks: #fff;
   --color-hover-bg-blocks: #3b82f6;
   --color-inside-border: rgb(59, 130, 246, 0.7) solid;
@@ -656,7 +656,7 @@ h6 {
 }
 @media (max-width: 759px) {
   .body table td {
-    font-size: calc(15px + 15 * (100vw - 320px) / 1600);
+    font-size: calc(12px + 18 * (100vw - 320px) / 1600);
   }
 }
 
