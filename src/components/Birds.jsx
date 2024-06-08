@@ -9,13 +9,13 @@ import Footer from './Footer';
 const Birds = () => {
   const data = useContext(MyContext);
   const oldBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec/exec?oldBirds=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec?oldBirds=true'
   );
   const tinyBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec/exec?tinyBirds=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec?tinyBirds=true'
   );
   const additivesConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec/exec?additives=true'
+    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec?additives=true'
   );
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const Birds = () => {
               <Table datas={data.oldBirdsData} />
             </div>
             <div className="product__category">
-              <h1> Молодняку птицы</h1>
+              <h1> Для молодняка</h1>
               <Table datas={data.tinyBirdsData} />
             </div>
             <div className="product__category">
