@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Pets = () => {
   const data = useContext(MyContext);
   const petsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbwQ63L_V4jN4QrlwyMkfwQI3BR9cr7GgaJC_hkJIpul3rAljwuK35QJs7iuL2VzgmKw/exec?pets=true'
+    'https://script.google.com/macros/s/AKfycbzdfARLD3XDDDXUwY0l2c3FHHyUcL1MU9zF8dKYzr-LI3R1dzVQI4S9Dc-fhCT2dRUL/exec?pets=true'
   );
 
   useEffect(() => {
