@@ -9,13 +9,13 @@ import Footer from './Footer';
 const Birds = () => {
   const data = useContext(MyContext);
   const oldBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbzdfARLD3XDDDXUwY0l2c3FHHyUcL1MU9zF8dKYzr-LI3R1dzVQI4S9Dc-fhCT2dRUL/exec?oldBirds=true'
+    'https://script.google.com/macros/s/AKfycbzAPi-U-tYTixTG7E9L0okKOZUtVqzncQ-ndTmErZNM5nO2Gz7ABR67yTLo0ZsZPLLU/exec?oldBirds=true'
   );
   const tinyBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbzdfARLD3XDDDXUwY0l2c3FHHyUcL1MU9zF8dKYzr-LI3R1dzVQI4S9Dc-fhCT2dRUL/exec?tinyBirds=true'
+    'https://script.google.com/macros/s/AKfycbzAPi-U-tYTixTG7E9L0okKOZUtVqzncQ-ndTmErZNM5nO2Gz7ABR67yTLo0ZsZPLLU/exec?tinyBirds=true'
   );
   const additivesConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbzdfARLD3XDDDXUwY0l2c3FHHyUcL1MU9zF8dKYzr-LI3R1dzVQI4S9Dc-fhCT2dRUL/exec?additives=true'
+    'https://script.google.com/macros/s/AKfycbzAPi-U-tYTixTG7E9L0okKOZUtVqzncQ-ndTmErZNM5nO2Gz7ABR67yTLo0ZsZPLLU/exec?additives=true'
   );
 
   useEffect(() => {

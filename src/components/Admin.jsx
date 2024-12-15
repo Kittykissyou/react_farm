@@ -10,7 +10,7 @@ import { MyContext } from './Context';
 const Admin = () => {
   const data = useContext(MyContext);
   const statisticConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbxpSpXyHdl8TkIVJmJs8omIPNffV8U1S0ygLvHT2CXcNihmgKyJ4RF5Bx-LRTdeLQaUmQ/exec?years=true'
+    'https://script.google.com/macros/s/AKfycbzAPi-U-tYTixTG7E9L0okKOZUtVqzncQ-ndTmErZNM5nO2Gz7ABR67yTLo0ZsZPLLU/exec?years=true'
   );
 
   useEffect(() => {

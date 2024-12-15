@@ -34,8 +34,9 @@ const Table = ({ datas }) => {
                 <td>{`Количество посещений в ${data.yearStat.data[0].name} году`}</td>
               )
             ) : (
-              <td>Текущий остаток</td>
+              <td>Остаток Куйбышева</td>
             )}
+            {data.yearStat ? <td></td> : <td>Остаток Крона</td>}
           </tr>
           {datas.data.map((el, index) => {
             return (
@@ -58,7 +59,8 @@ const Table = ({ datas }) => {
                 )}
 
                 <td>{el.price}</td>
-                <td>{el.value}</td>
+                <td>{el.valueZasopka}</td>
+                <td>{el.valueKashtak}</td>
               </tr>
             );
           })}
