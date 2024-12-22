@@ -23,8 +23,8 @@ const Footer = () => {
             <h1>Контакты</h1>
             <div className="contacts__mid-content">
               <h2>
-                Забайкальский край <br className="contacts-br-1" /> г. Чита, ул.
-                Куйбышева, д. 37
+                Забайкальский край, г. Чита <br className="contacts-br-1" />
+                ул. Куйбышева, д. 37 <br /> мкр. Гвардейский, д. 16
               </h2>
               <br />
               <h2> Режим работы:</h2>
