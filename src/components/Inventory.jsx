@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Inventory = () => {
   const data = useContext(MyContext);
   const inventoryConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbzAPi-U-tYTixTG7E9L0okKOZUtVqzncQ-ndTmErZNM5nO2Gz7ABR67yTLo0ZsZPLLU/exec?inventory=true'
+    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?inventory=true'
   );
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const Inventory = () => {
       .request(inventoryConfig)
       .then((response) => {
         data.setInventoryData(response.data);
+
         const birdsPostConfig = new data.PostConfig({
           mounth: data.nowDate,
           year: new Date().getFullYear(),

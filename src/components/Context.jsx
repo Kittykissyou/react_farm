@@ -23,6 +23,9 @@ const Context = (props) => {
     () => JSON.parse(localStorage.getItem('favorite')) || ''
   );
   const [getFavoriteData, setGetFavoriteData] = useState(false);
+  const [activeModalFrame, setActiveModalFrame] = useState(false);
+  const [namePositionForModalFrame, setNamePositionForModalFrame] =
+    useState(false);
   const mounthToggleHandle = (mounth) => {
     const requestMounthStat = () => {
       const mounthConfig = new Config(
@@ -222,6 +225,10 @@ const Context = (props) => {
     mounthStat,
     showMounth,
     nowDate,
+    activeModalFrame,
+    setActiveModalFrame,
+    namePositionForModalFrame,
+    setNamePositionForModalFrame,
   };
   return (
     <MyContext.Provider value={value}> {props.children}</MyContext.Provider>

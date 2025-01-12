@@ -646,6 +646,7 @@ h6 {
 }
 .body table .product__name {
   text-align: left;
+  cursor: pointer;
 }
 .body table td {
   font-size: calc(10px + 20 * (100vw - 320px) / 1600);
@@ -834,4 +835,114 @@ h6 {
 
 ._notPadding {
   padding: 0% 0%;
+}
+
+.ModalFrameContainer ._ModalFrame {
+  background: rgba(128, 128, 128, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.ModalFrameContainer ._innerFrame {
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: var(--color-background);
+  border-radius: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2% 0% 2% 0%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 759px) {
+  .ModalFrameContainer ._innerFrame {
+    width: 85%;
+    height: 75%;
+    padding: 2% 0% 2% 0%;
+  }
+}
+.ModalFrameContainer ._innerFrame h1 {
+  padding: 0;
+  font-size: calc(10px + 20 * (100vw - 320px) / 1600);
+  color: var(--color-text);
+  font-weight: 600;
+}
+@media (max-width: 759px) {
+  .ModalFrameContainer ._innerFrame h1 {
+    font-size: calc(20px + 10 * (100vw - 320px) / 1600);
+    padding: 0% 5% 0% 5%;
+  }
+}
+.ModalFrameContainer ._innerFrame ._innerFrame_description,
+.ModalFrameContainer ._innerFrame ._innerFrame_nutritional,
+.ModalFrameContainer ._innerFrame ._innerFrame_compound {
+  width: 90%;
+  text-align: left;
+}
+.ModalFrameContainer ._innerFrame ._innerFrame_description p,
+.ModalFrameContainer ._innerFrame ._innerFrame_nutritional p,
+.ModalFrameContainer ._innerFrame ._innerFrame_compound p {
+  color: var(--color-text);
+  font-size: calc(5px + 15 * (100vw - 320px) / 1600);
+}
+@media (max-width: 759px) {
+  .ModalFrameContainer ._innerFrame ._innerFrame_description p,
+  .ModalFrameContainer ._innerFrame ._innerFrame_nutritional p,
+  .ModalFrameContainer ._innerFrame ._innerFrame_compound p {
+    font-size: calc(10px + 70 * (100vw - 320px) / 1600);
+  }
+}
+
+._innerFrame_notFound {
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: var(--color-background);
+  border-radius: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2% 5% 2% 5%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 759px) {
+  ._innerFrame_notFound {
+    width: 85%;
+    height: 75%;
+    padding: 2% 0% 2% 0%;
+  }
 }
