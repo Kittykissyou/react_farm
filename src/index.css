@@ -101,17 +101,17 @@ h6 {
 
 /*--------------------*/
 :root {
-  --color-text: #191924;
-  --color-background: #f3f4f6;
-  --color-icon: #3b82f6;
+  --color-text: #472c26;
+  --color-background: #e8ded6;
+  --color-icon: #472c26;
   --color-border: none;
   --color-dot-border: #fff solid;
-  --color-table-border: white;
-  --color-table-inner-border: lightgrey;
-  --color-bg-blocks: #fff;
-  --color-hover-bg-blocks: #3b82f6;
+  --color-table-border: #e5e5e5;
+  --color-table-inner-border: #b8afa7;
+  --color-bg-blocks: #e5e5e5;
+  --color-hover-bg-blocks: #ff8c3e;
   --color-inside-border: rgb(59, 130, 246, 0.7) solid;
-  --color-hover-text: #3b82f6;
+  --color-hover-text: rgb(255, 140, 62);
   --color-loader-admin: rgba(255, 255, 255);
   --filter-map: none;
 }
@@ -120,12 +120,12 @@ h6 {
   --color-text: #aea8b2;
   --color-icon: #aea8b2;
   --color-background: #28333f;
-  --color-border: rgb(123, 97, 255, 0.5) solid;
-  --color-dot-border: rgb(123, 97, 255, 0.5) solid;
+  --color-border: rgb(255, 140, 62, 0.5) solid;
+  --color-dot-border: rgb(255, 140, 62, 0.5) solid;
   --color-table-border: #2f3c50;
   --color-table-inner-border: #aea8b2;
   --color-bg-blocks: #2f3c50;
-  --color-hover-bg-blocks: rgb(123, 97, 255, 0.5);
+  --color-hover-bg-blocks: rgb(255, 140, 62, 0.5);
   --color-inside-border: rgb(123, 97, 255, 0.5) solid;
   --color-hover-text: white;
   --color-sun: gold;
@@ -184,6 +184,10 @@ h6 {
 .navbar a {
   display: inline;
 }
+.navbar .navbar__logoIMG {
+  width: 8%;
+  height: 8%;
+}
 .navbar .navbar__logo {
   font-size: calc(25px + 30 * (100vw - 320px) / 1600);
   font-family: "Roboto Slab", serif;
@@ -199,9 +203,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .navbar .lmenu .arrow-back-container {
   width: 5%;
@@ -229,14 +233,14 @@ h6 {
 }
 @media (max-width: 759px) {
   .navbar .rmenu svg {
-    width: 25%;
-    height: 25%;
+    width: 45%;
+    height: 45%;
   }
 }
 @media (max-width: 450px) {
   .navbar .rmenu svg {
-    width: 35%;
-    height: 35%;
+    width: 70%;
+    height: 70%;
   }
 }
 .navbar .rmenu ._sun {

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MyContext } from './Context';
 import { useLocation } from 'react-router-dom';
 import Icon from './Iconset';
+import Logo from '../image/logo.png';
 
 export default function Navbar() {
   const data = useContext(MyContext);
@@ -18,6 +19,9 @@ export default function Navbar() {
         ) : (
           <></>
         )}
+
+        <img src={Logo} className="navbar__logoIMG" />
+
         <a className="navbar__logo" href="/">
           Комбикорма
         </a>

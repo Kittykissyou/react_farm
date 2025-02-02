@@ -2,36 +2,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&family=Roboto+Slab:wght@400;600&display=swap');
 
 :root {
-  --color-text: #191924;
-  --color-background: #f3f4f6;
-  --color-icon: #3b82f6;
-  --color-border: none;
-  --color-dot-border: #fff solid;
-  --color-table-border: white;
-  --color-table-inner-border: lightgrey;
-  --color-bg-blocks: #fff;
-  --color-hover-bg-blocks: #3b82f6;
-  --color-inside-border: rgb(59, 130, 246, 0.7) solid;
-  --color-hover-text: #3b82f6;
-  --color-loader-admin: rgba(255, 255, 255);
-  --filter-map: none;
+  --color-text: #472c26; //текст
+  --color-background: #e8ded6; //фон
+  --color-icon: #472c26; //иконки
+  --color-border: none; //граница блоков
+  --color-dot-border: #fff solid; // пока не понятно
+  --color-table-border: #e5e5e5; // Фон таблицы
+  --color-table-inner-border: #b8afa7; // граница внутри таблицы
+  --color-bg-blocks: #e5e5e5; // фон блоков
+  --color-hover-bg-blocks: #ff8c3e; // ховер блоков
+  --color-inside-border: rgb(59, 130, 246, 0.7) solid; // пока не понятно
+  --color-hover-text: rgb(255, 140, 62); // ховер текста
+  --color-loader-admin: rgba(255, 255, 255); // лоадер админ
+  --filter-map: none; // что-то с картой
+  //--color-text: #191924;
+  // --color-background: #f3f4f6; // old
+  //--color-icon: #3b82f6; // old
+  //--color-border: none; //old
+  //--color-dot-border: #fff solid; //old
+  //-color-table-border: white; //old
+  // --color-table-inner-border: lightgrey;//old
+  //--color-bg-blocks: #fff;//old
+  //--color-hover-bg-blocks: #3b82f6;//old
+  //--color-inside-border: rgb(59, 130, 246, 0.7) solid;//old
+  //--color-hover-text: #3b82f6;//old
+  //--color-loader-admin: rgba(255, 255, 255);//old
+  //--filter-map: none;//old
 }
 
 :root[data-color-scheme='dark'] {
   --color-text: #aea8b2;
   --color-icon: #aea8b2;
   --color-background: #28333f;
-  --color-border: rgb(123, 97, 255, 0.5) solid;
-  --color-dot-border: rgb(123, 97, 255, 0.5) solid;
+  --color-border: rgb(255, 140, 62, 0.5) solid;
+  --color-dot-border: rgb(255, 140, 62, 0.5) solid;
   --color-table-border: #2f3c50;
   --color-table-inner-border: #aea8b2;
   --color-bg-blocks: #2f3c50;
-  --color-hover-bg-blocks: rgb(123, 97, 255, 0.5);
+  --color-hover-bg-blocks: rgb(255, 140, 62, 0.5);
   --color-inside-border: rgb(123, 97, 255, 0.5) solid;
   --color-hover-text: white;
   --color-sun: gold;
   --color-loader-admin: rgba(255, 255, 255, 0.15);
   --filter-map: brightness(0.4);
+  //--color-text: #aea8b2; // old
+  //--color-icon: #aea8b2;
+  //--color-background: #28333f;
+  //--color-border: rgb(123, 97, 255, 0.5) solid;
+  //--color-dot-border: rgb(123, 97, 255, 0.5) solid;
+  //--color-table-border: #2f3c50;
+  //--color-table-inner-border: #aea8b2;
+  //--color-bg-blocks: #2f3c50;
+  //--color-hover-bg-blocks: rgb(123, 97, 255, 0.5);
+  //--color-inside-border: rgb(123, 97, 255, 0.5) solid;
+  //--color-hover-text: white;
+  //--color-sun: gold;
+  //--color-loader-admin: rgba(255, 255, 255, 0.15);
+  //--filter-map: brightness(0.4);
 }
 
 .wrapper {
@@ -70,6 +97,10 @@
     display: inline;
   }
 
+  .navbar__logoIMG {
+    width: 8%;
+    height: 8%;
+  }
   .navbar__logo {
     @include adaptive-font(55, 25);
     font-family: 'Roboto Slab', serif;
@@ -82,7 +113,7 @@
   }
   .lmenu {
     display: flex;
-    align-items: stretch;
+    align-items: center;
 
     .arrow-back-container {
       width: 5%;
@@ -105,12 +136,12 @@
       width: 30%;
       height: 30%;
       @media (max-width: 759px) {
-        width: 25%;
-        height: 25%;
+        width: 45%;
+        height: 45%;
       }
       @media (max-width: 450px) {
-        width: 35%;
-        height: 35%;
+        width: 70%;
+        height: 70%;
       }
     }
 
