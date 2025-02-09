@@ -7,9 +7,7 @@ import { MyContext } from './Context';
 import Footer from './Footer';
 const Rabbits = () => {
   const data = useContext(MyContext);
-  const rabbitsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?rabbits=true'
-  );
+  const rabbitsConfig = new data.Config(`${data.googleURL}?rabbits=true`);
 
   useEffect(() => {
     axios

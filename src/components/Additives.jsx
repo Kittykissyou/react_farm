@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Additives = () => {
   const data = useContext(MyContext);
   const additivesConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?universalAdditives=true'
+    `${data.googleURL}?universalAdditives=true`
   );
 
   useEffect(() => {

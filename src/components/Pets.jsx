@@ -7,9 +7,7 @@ import { MyContext } from './Context';
 import Footer from './Footer';
 const Pets = () => {
   const data = useContext(MyContext);
-  const petsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?pets=true'
-  );
+  const petsConfig = new data.Config(`${data.googleURL}?pets=true`);
 
   useEffect(() => {
     axios

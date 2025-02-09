@@ -7,9 +7,7 @@ import { MyContext } from './Context';
 import Footer from './Footer';
 const Grains = () => {
   const data = useContext(MyContext);
-  const grainsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?grains=true'
-  );
+  const grainsConfig = new data.Config(`${data.googleURL}?grains=true`);
 
   useEffect(() => {
     axios

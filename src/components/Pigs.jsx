@@ -7,9 +7,7 @@ import { MyContext } from './Context';
 import Footer from './Footer';
 const Pigs = () => {
   const data = useContext(MyContext);
-  const pigsConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?pigs=true'
-  );
+  const pigsConfig = new data.Config(`${data.googleURL}?pigs=true`);
 
   useEffect(() => {
     axios

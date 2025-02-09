@@ -7,9 +7,7 @@ import { MyContext } from './Context';
 import Footer from './Footer';
 const Inventory = () => {
   const data = useContext(MyContext);
-  const inventoryConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?inventory=true'
-  );
+  const inventoryConfig = new data.Config(`${data.googleURL}?inventory=true`);
 
   useEffect(() => {
     axios

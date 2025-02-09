@@ -8,15 +8,9 @@ import { MyContext } from './Context';
 import Footer from './Footer';
 const Birds = () => {
   const data = useContext(MyContext);
-  const oldBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?oldBirds=true'
-  );
-  const tinyBirdConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?tinyBirds=true'
-  );
-  const additivesConfig = new data.Config(
-    'https://script.google.com/macros/s/AKfycbw5EK1LSHY_3N-Pucr1NRNSbxZQMfaduoDkvqvs_4eUoQpUT80pcmYKoXA0coyp-ilY/exec?additives=true'
-  );
+  const oldBirdConfig = new data.Config(`${data.googleURL}?oldBirds=true`);
+  const tinyBirdConfig = new data.Config(`${data.googleURL}?tinyBirds=true`);
+  const additivesConfig = new data.Config(`${data.googleURL}?additives=true`);
 
   useEffect(() => {
     axios

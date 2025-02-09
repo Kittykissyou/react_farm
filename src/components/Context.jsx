@@ -125,6 +125,8 @@ const Context = (props) => {
     { name: 'Добавки', link: '/additives' },
     { name: 'Для домашних животных', link: '/pets' },
   ];
+  const googleURL =
+    'https://script.google.com/macros/s/AKfycbxfZbVZAwfYcxu01O2e6dygLY5zL_z6mgRP20qB54sviRaV26A3WjZbqdrA-M36aT92/exec';
   class Config {
     constructor(url) {
       this.method = 'get';
@@ -229,6 +231,7 @@ const Context = (props) => {
     setActiveModalFrame,
     namePositionForModalFrame,
     setNamePositionForModalFrame,
+    googleURL,
   };
   return (
     <MyContext.Provider value={value}> {props.children}</MyContext.Provider>
