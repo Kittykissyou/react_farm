@@ -126,7 +126,7 @@ const Context = (props) => {
     { name: 'Для домашних животных', link: '/pets' },
   ];
   const googleURL =
-    'https://script.google.com/macros/s/AKfycby9wAjNjiftaksugOIkn3hsEjwV30npdP9VkTlIQBR3iLHcmoQTYCVB2uYXp-mEVxXs/exec';
+    'https://script.google.com/macros/s/AKfycbzCJNUmcyrfcxzrQJCKGcFwXUggvYbti1scxqYN0zkx6mzVKSRlPfRGT66lVBS9sAc/exec';
   class Config {
     constructor(url) {
       this.method = 'get';
